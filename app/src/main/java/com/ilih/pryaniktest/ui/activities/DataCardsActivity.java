@@ -42,9 +42,9 @@ public class DataCardsActivity extends MvpAppCompatActivity implements DataCards
     public void showEventSource(int pos, String name, boolean isCard) {
         StringBuilder builder = new StringBuilder();
         builder.append("Click event provided by ");
-        if(isCard){
+        if (isCard) {
             builder.append("card at position ");
-        }else {
+        } else {
             builder.append("spinner item at position ");
         }
         builder.append(pos)
@@ -54,7 +54,7 @@ public class DataCardsActivity extends MvpAppCompatActivity implements DataCards
     }
 
     @Override
-    public void emptyCommand(){
+    public void emptyCommand() {
 
     }
 

@@ -13,22 +13,22 @@ import retrofit2.Response;
 @InjectViewState
 public class ServeRequestPresenter extends MvpPresenter<ServeRequestView> {
 
-    public ServeRequestPresenter(){
+    public ServeRequestPresenter() {
         super();
     }
 
-    public void buttonClicked(){
+    public void buttonClicked() {
 
         getViewState().showProgress();
     }
 
-    public void sendRequest(String url){
+    public void sendRequest(String url) {
 
         ServerApp.getApi().getResponse(url).enqueue(new Callback<ServerData>() {
             @Override
             public void onResponse(Call<ServerData> call, Response<ServerData> response) {
 
-                if(response.body() == null) onFailure(call, null);
+                if (response.body() == null) onFailure(call, null);
                 else {
                     ServerApp.setResponseData(response.body());
                     getViewState().showRequestResult();

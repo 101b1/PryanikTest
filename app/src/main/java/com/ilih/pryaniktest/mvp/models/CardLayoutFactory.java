@@ -4,8 +4,8 @@ import com.ilih.pryaniktest.R;
 
 public class CardLayoutFactory {
 
-    public static int getCardLayout(CardType type){
-        switch (type){
+    public static int getCardLayout(CardType type) {
+        switch (type) {
             case hz:
                 return R.layout.card_text;
             case picture:

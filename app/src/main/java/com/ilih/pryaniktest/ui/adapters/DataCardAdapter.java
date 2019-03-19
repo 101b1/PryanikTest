@@ -37,7 +37,7 @@ public class DataCardAdapter extends RecyclerView.Adapter<DataCardAdapter.ViewHo
 //    @InjectPresenter
 //    DataCardsPresenter mPresenter;
 
-    public DataCardAdapter(ServerData data, CardClickListener listener){
+    public DataCardAdapter(ServerData data, CardClickListener listener) {
         this.mData = data.getData();
         mViewTypes = data.getView();
         mDataMap = data.getDataMap();
@@ -52,7 +52,7 @@ public class DataCardAdapter extends RecyclerView.Adapter<DataCardAdapter.ViewHo
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewTypePosition) {
-        CardView cv = (CardView)LayoutInflater.from(parent.getContext())
+        CardView cv = (CardView) LayoutInflater.from(parent.getContext())
                 .inflate(CardLayoutFactory.getCardLayout(CardType.valueOf(
                         mViewTypes.get(viewTypePosition))), parent, false);
         return new DataCardAdapter.ViewHolder(cv);
@@ -64,7 +64,7 @@ public class DataCardAdapter extends RecyclerView.Adapter<DataCardAdapter.ViewHo
         CardView cv = holder.getCardView();
         Data data = mData.get(mDataMap.get(type)).getData();
 
-        switch (CardType.valueOf(type)){
+        switch (CardType.valueOf(type)) {
             case hz:
                 TextView text = cv.findViewById(R.id.text_content);
                 text.setText(data.getText());
@@ -118,16 +118,18 @@ public class DataCardAdapter extends RecyclerView.Adapter<DataCardAdapter.ViewHo
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private CardView cardView;
+
         public ViewHolder(@NonNull CardView itemView) {
             super(itemView);
             cardView = itemView;
         }
-        CardView getCardView(){
+
+        CardView getCardView() {
             return cardView;
         }
     }
 
-    public interface CardClickListener{
+    public interface CardClickListener {
         void onClicked(int position, String name, boolean isCard);
     }
 }

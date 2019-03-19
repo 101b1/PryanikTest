@@ -9,7 +9,9 @@ import com.arellomobile.mvp.viewstate.strategy.StateStrategyType;
 public interface ServeRequestView extends MvpView {
 
     void showProgress();
+
     void hideProgress();
+
     void showRequestError();
 
     @StateStrategyType(SkipStrategy.class)

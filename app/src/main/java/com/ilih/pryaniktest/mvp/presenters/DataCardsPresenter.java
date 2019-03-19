@@ -15,11 +15,11 @@ public class DataCardsPresenter extends MvpPresenter<DataCardsView> {
         getViewState().emptyCommand();
     }
 
-    public ServerData provideContent(){
+    public ServerData provideContent() {
         return ServerApp.getResponseData();
     }
 
-    public void cardClickedAction(int position, String name, boolean isCard){
+    public void cardClickedAction(int position, String name, boolean isCard) {
         getViewState().showEventSource(position, name, isCard);
     }
 
