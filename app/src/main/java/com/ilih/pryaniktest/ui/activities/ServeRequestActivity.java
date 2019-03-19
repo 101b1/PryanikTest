@@ -1,4 +1,4 @@
-package com.ilih.pryaniktest.ui;
+package com.ilih.pryaniktest.ui.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
