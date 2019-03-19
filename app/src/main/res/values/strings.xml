@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PryanikTest</string>
+    <string name="button_send_text">Send</string>
+    <string name="edit_address_hint">Address…</string>
+    <string name="text_status_help">Enter server address to send query:</string>
+    <string name="text_status_progress">Getting some info… Please wait</string>
+</resources>
