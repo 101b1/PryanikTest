@@ -1,5 +1,5 @@
 # PryanikTest
-Test app for pryaniky.com using Moxy MVP lib.
+Test app for pryaniky.com using Moxy MVP lib. APK is located in "app" folder.
 
 Задание: ответа 
   Получить с сервера JSON файл со списком данных для отображения на странице нескольких типов (Ex: картинка, Текст, селектор одного варианта из N), а также массивом со списком, какие блоки надо отобразить. Ex: https://prnk.blob.core.windows.net/tmp/JSONSample.json (data - данные, view: массив с последовательностью отображения)
